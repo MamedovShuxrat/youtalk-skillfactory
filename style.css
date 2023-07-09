@@ -75,7 +75,6 @@ img {
     width: 100%;
     max-width: 1440px;
     margin: 0 auto;
-    border: 1px solid red;
 }
 
 .header {
@@ -182,6 +181,7 @@ img {
 .about {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .about__content {
@@ -266,7 +266,7 @@ img {
     text-decoration-line: underline;
     cursor: pointer;
     display: block;
-    margin-bottom: 24px;
+    margin-bottom: 8px;
 }
 
 .about__card-sup-item {
@@ -1065,8 +1065,6 @@ img {
         margin: 0 8px 8px 0;
     }
 
-    .cards-other__item {}
-
     .footer__wrapper {
         padding: 0 32px;
     }
@@ -1077,6 +1075,14 @@ img {
 
     .cards-main__img {
         max-width: 100%;
+    }
+
+    .click-problem, 
+    .media-screen-hide{
+        display: none;
+    }
+    .media-screen-hide .about-filter__item{
+        display: none;
     }
 }
 
@@ -1163,6 +1169,25 @@ img {
     .footer__wrapper {
         padding: 0 20px;
     }
+
+    .about{
+        flex-direction: column;
+    }
+    
+    .about__aside{
+        display: flex;
+        column-gap: 16px;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+
+    .aside__item{
+        width: calc(50% - 32px);
+    }
+
+    .about__title {
+        margin-top: 32px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -1193,6 +1218,48 @@ img {
     .footer__copyright {
         flex-direction: column;
         gap: 0;
+
+    }
+
+    .about__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about__repertoire{
+        grid-template-columns: 1fr;
+    }
+    .about__decs{
+        margin-top: 8px;
+    }
+    .about__pic{
+        display: flex;
+        justify-content: center;
+    }
+
+    .about__card-content-title{
+        margin-top: 24px;
+    }
+
+    .about__quote-center{
+        padding: 0;
+    }
+
+    .about__repertoire-img{
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .about__repertoire-text{
+        margin-bottom: 16px;
+    }
+
+    .about__repertoire-text:last-child{
+        margin-bottom: 0;
+    }
+
+    .aside__item{
+        width: 100%;
     }
 }
 
